@@ -1,15 +1,26 @@
 #include <iostream>
 
-#include "dLinkList.h"
-#include "dLinkListNode.h"
+#include "DLinkList.h"
+#include "DLinkListNode.h"
 
-#include "dLinkListNode.cpp"
+#include "DLinkListNode.cpp"
 
-using namespace std; 
+#include <string>
+
+//using namespace std; 
 
 int main() {
 
-    cout << "hello big bruddah" << endl;
+    DLinkList list;
+    
+    std::string entry;
+
+    std::cout << "Enter za word to za doubly linked list: " << std::endl;
+    std::cin >> entry;
+
+    list.insertString(entry);
+
+    std::cout << "hello big bruddah" << std::endl;
 
 
     return 0;
