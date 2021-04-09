@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 #include "DLinkListNode.h"
 #pragma once 
@@ -22,3 +23,8 @@ class DLinkList {
         bool deleteCurrent();
         */
 };
+=======
+//people die when they are killed
+
+// i am a big xbox gamer
+>>>>>>> 18a8fe1a038940db219df3b35e723d2ac1baa409
