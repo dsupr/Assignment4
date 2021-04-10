@@ -5,18 +5,17 @@
 class DLinkList {
 
     private:
-        DLinkListNode *first, *last, *current;
+        DLinkListNode *head, *tail, *current;
 
     public:
-        DLinkList() {first = nullptr;};
-        void insertString(std::string a);
-
+        DLinkList() {head = nullptr; tail = nullptr; current = nullptr;};
+        void insertString(std::string d);
+        bool getCurrent(std::string &d);
         /*
-        void gotoFirst();
         void gotoLast();
         void gotoNext();
         void gotoPrev();
-        bool getCurrent(string);
+        
         bool deleteCurrent();
         */
 };
