@@ -13,29 +13,61 @@ int main() {
 
     DLinkList list;
     std::string entry;
-    std::string rebruh = "";
+    std::string stringReturn = "";
 
-    std::cout << "Enter za word to za doubly linked list: " << std::endl;
+    std::cout << "Enter a word to the doubly linked list: " << std::endl;
     std::cin >> entry;
 
     list.insertString(entry);
-    std::string dio;
-    dio = "BUT IT WAS I DIO";
-    list.insertString(dio);
+    std::string sampleString;
+    sampleString = "this is the second string entered into list";
+    list.insertString(sampleString);
 
-    std::cout << "before wait actually: " << dio << std::endl;
-    if (list.getCurrent(rebruh))
+    list.getCurrent(stringReturn);
+    std::cout << "before go to prev: " << stringReturn << std::endl;
+    list.gotoPrev();
+    list.getCurrent(stringReturn);
+    std::cout << "after go to prev: " << stringReturn << std::endl;
+
+    list.gotoNext();
+    list.getCurrent(stringReturn);
+    std::cout << "after go to next: " << stringReturn << std::endl;
+
+    if (list.deleteCurrent()) 
     {
-        std::cout << "get was true" << std::endl;
+        std::cout << "Twas true" << std::endl;
     }
-    else 
+    else
     {
-        std::cout << "get was false" << std::endl;
+        std::cout << "twas false" << std::endl;
     }
+    
+    list.getCurrent(stringReturn);
+    std::cout << "after delete: " << stringReturn << std::endl;
+    list.insertString(sampleString);
+    list.gotoLast();
+    list.getCurrent(stringReturn); 
+    std::cout << "After insert and go to last: " << stringReturn << std::endl;
 
-    std::cout << "wait actually: " << rebruh << std::endl;
+    std::string sampleString2 = "3rd entry of string";
+    list.insertString(sampleString2);
+    list.gotoLast();
+    list.getCurrent(stringReturn);
+    std::cout << "After insert again and go to last again: " << stringReturn << std::endl;
+    
+    list.gotoPrev();
+    list.getCurrent(stringReturn);
+    std::cout << "after go to prev: " << stringReturn << std::endl;
+    
+    list.gotoLast();
+    list.getCurrent(stringReturn); 
+    std::cout << "After go to last: " << stringReturn << std::endl;
 
-    std::cout << "hello big bruddah" << std::endl;
+
+    list.gotoFirst();
+    list.getCurrent(stringReturn);
+    std::cout << "after go to first: " <<stringReturn << std::endl;
+    
 
 
     return 0;
